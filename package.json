@@ -1,0 +1,24 @@
+{
+  "name": "redux-create-type",
+  "version": "0.0.3",
+  "description": "",
+  "main": "./lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Apozhidaev/redux-create-type.git"
+  },
+  "author": "alexanderpo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Apozhidaev/redux-create-type/issues"
+  },
+  "homepage": "https://github.com/Apozhidaev/redux-create-type#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-stage-2": "^6.24.1"
+  },
+  "scripts": {
+    "build": "babel src --out-dir lib --presets=env,stage-2"
+  }
+}
