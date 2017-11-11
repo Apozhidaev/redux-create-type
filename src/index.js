@@ -5,7 +5,7 @@ export const ASYNC = ['BEGIN', 'END'];
 
 
 export function action(type, payload = {}) {
-  return { type, ...payload };
+  return { ...payload, type };
 }
 
 export function createType(namespace, ...paths) {
@@ -41,4 +41,12 @@ export function createType(namespace, ...paths) {
   };
 
   return definition => type(definition, globalPrefix);
+}
+
+export function fetchCreator(type) {
+  return {
+    request: params => action(type.REQUEST, { params }),
+    success: data => action(type.SUCCESS, { data }),
+    failure: error => action(type.FAILURE, { error }),
+  };
 }
